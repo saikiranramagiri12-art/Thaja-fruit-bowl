@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Policy — Thaja Fruit Bowl</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Jost:wght@300;400;500;600&family=Noto+Sans+Telugu:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:       #FBF7EE;
+    --bg-2:     #F2EBD7;
+    --ink:      #1F3A24;
+    --ink-soft: #3D5A42;
+    --gold:     #cc8b13;
+    --gold-soft:#c88b08;
+    --accent:   #C8362A;
+    --line:     rgba(31, 58, 36, 0.22);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.05 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    opacity: 0.5;
+    z-index: 1;
+    mix-blend-mode: multiply;
+  }
+
+  .halo {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 0;
+    pointer-events: none;
+  }
+  .halo.h1 { width: 500px; height: 500px; background: #E8DAB2; top: -200px; right: -180px; opacity: 0.5; }
+  .halo.h2 { width: 420px; height: 420px; background: #C9D9B8; top: 60%; left: -160px; opacity: 0.4; }
+
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 clamp(20px, 5vw, 60px);
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ---- Header ---- */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 4px 20px -10px rgba(31, 58, 36, 0.1);
+  }
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+    gap: 20px;
+  }
+  .brand {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .brand-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    line-height: 1;
+  }
+  .brand-tag {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-top: 4px;
+  }
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .back-link:hover { color: var(--ink); }
+  .back-link::before { content: "←"; font-size: 15px; }
+
+  /* ---- Page hero ---- */
+  .page-hero {
+    padding: 64px 0 52px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 56px;
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+  .eyebrow::before,
+  .eyebrow::after {
+    content: "";
+    display: block;
+    width: 28px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.6;
+  }
+  .page-hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(34px, 5vw, 58px);
+    font-weight: 300;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin-bottom: 16px;
+  }
+  .page-hero h1 em {
+    font-style: italic;
+    color: var(--ink-soft);
+  }
+  .page-hero .meta {
+    font-size: 13px;
+    color: var(--ink-soft);
+    letter-spacing: 0.04em;
+  }
+  .page-hero .meta strong {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  /* ---- Policy content ---- */
+  .policy-body {
+    padding-bottom: 100px;
+  }
+
+  .policy-section {
+    margin-bottom: 52px;
+  }
+
+  .section-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+
+  .policy-section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .policy-section p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+  }
+  .policy-section p:last-child { margin-bottom: 0; }
+
+  .policy-section ul {
+    list-style: none;
+    margin: 14px 0;
+  }
+  .policy-section ul li {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    padding: 7px 0 7px 22px;
+    position: relative;
+    border-bottom: 1px solid rgba(31, 58, 36, 0.07);
+  }
+  .policy-section ul li:last-child { border-bottom: none; }
+  .policy-section ul li::before {
+    content: "◆";
+    position: absolute;
+    left: 0;
+    top: 9px;
+    font-size: 7px;
+    color: var(--gold);
+    opacity: 0.8;
+  }
+
+  .highlight-box {
+    background: var(--bg-2);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 12px 12px 0;
+    padding: 20px 24px;
+    margin: 24px 0;
+  }
+  .highlight-box p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--ink);
+  }
+
+  .contact-card {
+    background: var(--bg-2);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 28px 32px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    margin-top: 24px;
+  }
+  .contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .contact-item .label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .contact-item .value {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+  }
+  .contact-item .value a {
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+    transition: border-color 0.2s, color 0.2s;
+  }
+  .contact-item .value a:hover {
+    color: var(--gold);
+    border-color: var(--gold);
+  }
+
+  /* ---- Divider ---- */
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 48px 0;
+    color: var(--gold);
+  }
+  .divider::before,
+  .divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+  }
+  .divider-diamond { font-size: 8px; letter-spacing: 6px; }
+
+  /* ---- Footer ---- */
+  .site-footer {
+    background: var(--ink);
+    color: rgba(255,255,255,0.7);
+    padding: 40px 0;
+    position: relative;
+    z-index: 2;
+  }
+  .footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .footer-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.9);
+    letter-spacing: 0.04em;
+  }
+  .footer-note {
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    text-align: right;
+  }
+  .footer-note a {
+    color: var(--gold-soft);
+    text-decoration: none;
+  }
+  .footer-note a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="halo h1"></div>
+<div class="halo h2"></div>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-name">Thaja Fruit Bowl</span>
+        <span class="brand-tag">Daily Dose of Your Health</span>
+      </a>
+      <a class="back-link" href="index.html">Back to Home</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Page hero -->
+  <div class="page-hero">
+    <div class="container">
+      <div class="eyebrow">Legal</div>
+      <h1>Privacy <em>Policy</em></h1>
+      <p class="meta">
+        <strong>Effective Date:</strong> June 1, 2026 &nbsp;·&nbsp;
+        <strong>Last Updated:</strong> June 9, 2026 &nbsp;·&nbsp;
+        <strong>Applies to:</strong> Thaja Fruit Bowl, Mancherial, Telangana, India
+      </p>
+    </div>
+  </div>
+
+  <!-- Policy body -->
+  <div class="policy-body">
+    <div class="container">
+
+      <div class="highlight-box">
+        <p>Your privacy matters to us. Thaja Fruit Bowl collects only the information needed to deliver your orders and keep you informed. We do not sell your personal data to anyone.</p>
+      </div>
+
+      <!-- 1. Who we are -->
+      <div class="policy-section">
+        <div class="section-num">01</div>
+        <h2>Who We Are</h2>
+        <p>Thaja Fruit Bowl ("we", "us", "our") is a fresh fruit bowl delivery service operating in Mancherial, Telangana, India. We deliver handcrafted fruit bowls made from 100% natural ingredients directly to your home.</p>
+        <p>This Privacy Policy explains how we collect, use, and protect information you provide when you place an order, contact us via WhatsApp, or visit our website.</p>
+      </div>
+
+      <div class="divider"><span class="divider-diamond">◆ ◆ ◆</span></div>
+
+      <!-- 2. Information we collect -->
+      <div class="policy-section">
+        <div class="section-num">02</div>
+        <h2>Information We Collect</h2>
+        <p>We collect the following information only when you voluntarily provide it to us:</p>
+        <ul>
+          <li><strong>Full name</strong> — to address your order and delivery</li>
+          <li><strong>Phone number (WhatsApp)</strong> — to confirm orders, share delivery updates, and send receipts</li>
+          <li><strong>Delivery address</strong> — to deliver your fruit bowls to the correct location in Mancherial</li>
+          <li><strong>Order details</strong> — the items, quantities, and special instructions you request</li>
+          <li><strong>Subscription preferences</strong> — if you sign up for a daily or weekly delivery plan</li>
+          <li><strong>Health or dietary preferences</strong> (optional) — only if you share them to help us suggest suitable bowls</li>
+        </ul>
+        <p>We do <strong>not</strong> collect payment card numbers, government IDs, or any sensitive financial data. Cash or UPI payments are settled in person or via a third-party UPI app (e.g., Google Pay, PhonePe) whose own privacy policies apply.</p>
+      </div>
+
+      <div class="divider"><span class="divider-diamond">◆ ◆ ◆</span></div>
+
+      <!-- 3. How we use your information -->
+      <div class="policy-section">
+        <div class="section-num">03</div>
+        <h2>How We Use Your Information</h2>
+        <p>We use the information you provide exclusively for the following purposes:</p>
+        <ul>
+          <li>Processing and fulfilling your fruit bowl orders</li>
+          <li>Confirming orders and communicating delivery status via WhatsApp</li>
+          <li>Managing daily or subscription delivery schedules</li>
+          <li>Sending you updates about new bowl offerings, seasonal specials, or price changes — only if you have opted in</li>
+          <li>Resolving complaints or questions about your order</li>
+          <li>Improving our service based on general feedback patterns</li>
+        </ul>
+        <p>We will never use your information for unrelated marketing, spam, or automated profiling.</p>
+      </div>
+
+      <div class="divider"><span class="divider-diamond">◆ ◆ ◆</span></div>
+
+      <!-- 4. How we share your information -->
+      <div class="policy-section">
+        <div class="section-num">04</div>
+        <h2>How We Share Your Information</h2>
+        <p>We do not sell, rent, or trade your personal information to any third party.</p>
+        <p>We may share limited information in these specific circumstances:</p>
+        <ul>
+          <li><strong>Delivery personnel</strong> — your name and address are shared only with the delivery staff member assigned to your order, solely to complete delivery</li>
+          <li><strong>Legal obligation</strong> — if required by Indian law, a court order, or government authority</li>
+        </ul>
+        <p>No other sharing occurs. We do not use advertising networks, analytics platforms that track individuals, or data brokers.</p>
+      </div>
+
+      <div class="divider"><span class="divider-diamond">◆ ◆ ◆</span></div>
+
+      <!-- 5. WhatsApp & communications -->
+      <div class="policy-section">
+        <div class="section-num">05</div>
+        <h2>WhatsApp &amp; Communications</h2>
+        <p>We communicate primarily through WhatsApp. By sharing your phone number to place an order, you agree to receive order-related messages on WhatsApp from Thaja Fruit Bowl.</p>
+        <p>Promotional messages (e.g., new bowls, offers) are sent only to customers who have explicitly opted in. You can opt out at any time by replying <strong>"STOP"</strong> or messaging us directly.</p>
+        <p>WhatsApp's own privacy policy governs how Meta processes messages on its platform. We recommend reviewing it at <strong>whatsapp.com/legal/privacy-policy</strong>.</p>
+      </div>
+
+      <div class="divider"><span class="divider-diamond">◆ ◆ ◆</span></div>
+
+      <!-- 6. Data retention -->
+      <div class="policy-section">
+        <div class="section-num">06</div>
+        <h2>Data Retention</h2>
+        <p>We retain your personal information for as long as you are an active customer or as required to resolve disputes, comply with legal obligations, or maintain order records.</p>
+        <ul>
+          <li><strong>Order records</strong> — kept for up to 3 years for accounting and dispute resolution</li>
+          <li><strong>Inactive customers</strong> — contact details are deleted or anonymised after 12 months of inactivity, unless you ask us to remove them sooner</li>
+          <li><strong>Opt-out requests</strong> — marketing records are deleted within 30 days of your opt-out</li>
+        </ul>
+      </div>
+
+      <div class="divider"><span class="divider-diamond">◆ ◆ ◆</span></div>
+
+      <!-- 7. Your rights -->
+      <div class="policy-section">
+        <div class="section-num">07</div>
+        <h2>Your Rights</h2>
+        <p>Under the Digital Personal Data Protection Act, 2023 (India) and applicable consumer protection laws, you have the right to:</p>
+        <ul>
+          <li><strong>Access</strong> — request a copy of the personal data we hold about you</li>
+          <li><strong>Correction</strong> — ask us to correct inaccurate or incomplete information</li>
+          <li><strong>Deletion</strong> — request that we delete your personal data, subject to legal retention obligations</li>
+          <li><strong>Withdraw consent</strong> — stop receiving promotional communications at any time</li>
+          <li><strong>Grievance redressal</strong> — raise a complaint if you believe your data is misused</li>
+        </ul>
+        <p>To exercise any of these rights, contact us using the details in Section 10 below. We will respond within <strong>15 business days</strong>.</p>
+      </div>
+
+      <div class="divider"><span class="divider-diamond">◆ ◆ ◆</span></div>
+
+      <!-- 8. Data security -->
+      <div class="policy-section">
+        <div class="section-num">08</div>
+        <h2>Data Security</h2>
+        <p>We take reasonable steps to protect your information from unauthorised access, loss, or disclosure. Customer data is stored in access-restricted systems and shared with staff only on a need-to-know basis.</p>
+        <p>However, no method of transmission over the internet or electronic storage is 100% secure. If you believe your information has been compromised, please contact us immediately.</p>
+      </div>
+
+      <div class="divider"><span class="divider-diamond">◆ ◆ ◆</span></div>
+
+      <!-- 9. Children -->
+      <div class="policy-section">
+        <div class="section-num">09</div>
+        <h2>Children's Privacy</h2>
+        <p>Our service is intended for adults placing orders on behalf of their household. We do not knowingly collect personal information from children under the age of 18 without parental consent. If you believe a child has provided us information without consent, please contact us and we will delete it promptly.</p>
+      </div>
+
+      <div class="divider"><span class="divider-diamond">◆ ◆ ◆</span></div>
+
+      <!-- 10. Changes -->
+      <div class="policy-section">
+        <div class="section-num">10</div>
+        <h2>Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time to reflect changes in our practices or applicable law. The "Last Updated" date at the top of this page will always reflect the most recent revision.</p>
+        <p>For significant changes, we will notify active customers via WhatsApp before the new policy takes effect.</p>
+      </div>
+
+      <div class="divider"><span class="divider-diamond">◆ ◆ ◆</span></div>
+
+      <!-- 11. Contact -->
+      <div class="policy-section">
+        <div class="section-num">11</div>
+        <h2>Contact Us</h2>
+        <p>For any questions about this Privacy Policy, to exercise your rights, or to raise a grievance, please reach out to us:</p>
+        <div class="contact-card">
+          <div class="contact-item">
+            <span class="label">Business</span>
+            <span class="value">Thaja Fruit Bowl</span>
+          </div>
+          <div class="contact-item">
+            <span class="label">Location</span>
+            <span class="value">Mancherial, Telangana, India</span>
+          </div>
+          <div class="contact-item">
+            <span class="label">Phone / WhatsApp</span>
+            <span class="value"><a href="https://wa.me/918096130120">+91 8096 130 120</a></span>
+          </div>
+          <div class="contact-item">
+            <span class="label">Email</span>
+            <span class="value"><a href="mailto:Thajafruitbowl@gmail.com">Thajafruitbowl@gmail.com</a></span>
+          </div>
+          <div class="contact-item">
+            <span class="label">Business Hours</span>
+            <span class="value">Mon – Sat: 9:00 AM – 7:00 PM</span>
+          </div>
+          <div class="contact-item">
+            <span class="label">Instagram</span>
+            <span class="value"><a href="https://instagram.com/thaja_fruitbowl" target="_blank" rel="noopener">@thaja_fruitbowl</a></span>
+          </div>
+          <div class="contact-item">
+            <span class="label">Facebook</span>
+            <span class="value"><a href="https://facebook.com/thajafruitbowl" target="_blank" rel="noopener">thajafruitbowl</a></span>
+          </div>
+          <div class="contact-item">
+            <span class="label">YouTube</span>
+            <span class="value"><a href="https://youtube.com/@thajafruitbowl" target="_blank" rel="noopener">@thajafruitbowl</a></span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /container -->
+  </div><!-- /policy-body -->
+</main>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <span class="footer-brand">Thaja Fruit Bowl</span>
+      <div class="footer-note">
+        &copy; 2026 Thaja Fruit Bowl. All rights reserved.<br>
+        Mancherial, Telangana, India &nbsp;·&nbsp;
+        <a href="index.html">Home</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
